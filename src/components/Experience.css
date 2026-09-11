@@ -1,0 +1,783 @@
+/* ==================================================
+   EXPERIENCE SECTION
+================================================== */
+
+.experience-section {
+  position: relative;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.experience__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+  margin-bottom: 42px;
+}
+
+
+.experience__title {
+  margin: 0;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+
+.experience__title span {
+  color: var(--accent);
+}
+
+
+.experience__subtitle {
+  margin: 12px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   ANNOTATION
+================================================== */
+
+.experience__annotation {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding-bottom: 16px;
+
+  color: var(--text-muted);
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 0.8rem;
+
+  white-space: nowrap;
+
+  transform: rotate(-3deg);
+}
+
+
+.experience__annotation span:nth-child(1) {
+  transform: rotate(-5deg);
+}
+
+
+.experience__annotation span:nth-child(2) {
+  transform:
+    translateY(-5px)
+    rotate(4deg);
+}
+
+
+.experience__annotation span:nth-child(3) {
+  transform:
+    translateY(2px)
+    rotate(-2deg);
+}
+
+
+.experience__annotation span:nth-child(4) {
+  transform:
+    translateY(-4px)
+    rotate(5deg);
+}
+
+
+.experience__annotation i {
+  position: absolute;
+
+  right: -5px;
+  bottom: 1px;
+
+  width: 95px;
+  height: 18px;
+
+  border-bottom:
+    1.5px solid var(--accent);
+
+  border-radius: 50%;
+
+  transform: rotate(-5deg);
+}
+
+
+/* ==================================================
+   EXPERIENCE LIST
+================================================== */
+
+.experience__list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+
+/* ==================================================
+   EXPERIENCE CARD
+   SAME AS PROJECT CARD
+================================================== */
+
+.experience-card {
+  display: grid;
+
+  grid-template-columns:
+    190px
+    minmax(0, 1fr);
+
+  gap: 28px;
+
+  align-items: stretch;
+
+  padding: 20px;
+
+  background: var(--surface);
+
+  border:
+    1px solid var(--surface-border);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.035);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+.experience-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.07);
+
+  border-color:
+    rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==================================================
+   COMPANY LOGO
+   SAME SIZE AS PROJECT IMAGE
+================================================== */
+
+.experience-card__image {
+  position: relative;
+
+  width: 190px;
+  height: 145px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--surface-border);
+
+  border-radius: 8px;
+
+  background: #ffffff;
+}
+
+
+.experience-card__image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: contain;
+  object-position: center;
+
+  padding: 12px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.experience-card:hover
+.experience-card__image img {
+  transform: scale(1.035);
+}
+
+
+/* ==================================================
+   LOGO FALLBACK
+================================================== */
+
+.experience-card__logo-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ffffff;
+
+  color: var(--accent);
+
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.experience-card__content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+
+/* ==================================================
+   TOP
+================================================== */
+
+.experience-card__top {
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+.experience-card__heading {
+  min-width: 0;
+}
+
+
+.experience-card__top h3 {
+  margin: 0;
+
+  color: var(--text);
+
+  font-size: 1.35rem;
+  line-height: 1.2;
+
+  font-weight: 750;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* ==================================================
+   COMPANY
+================================================== */
+
+.experience-card__company {
+  margin: 5px 0 0;
+
+  color: var(--text);
+
+  font-size: 0.8rem;
+  line-height: 1.4;
+
+  font-weight: 650;
+}
+
+
+/* ==================================================
+   LOCATION
+================================================== */
+
+.experience-card__location {
+  margin: 4px 0 0;
+
+  color: var(--text-muted);
+
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+
+/* ==================================================
+   PERIOD
+================================================== */
+
+.experience-card__period {
+  flex-shrink: 0;
+
+  display: inline-flex;
+  align-items: center;
+
+  min-height: 28px;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  background: var(--surface-alt);
+
+  border:
+    1px solid var(--surface-border);
+
+  color: var(--text-muted);
+
+  font-size: 0.7rem;
+
+  font-weight: 650;
+
+  white-space: nowrap;
+}
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.experience-card__description {
+  margin-top: 14px;
+}
+
+
+.experience-card__description p {
+  position: relative;
+
+  margin:
+    0 0 6px;
+
+  padding-left: 14px;
+
+  color: var(--text-muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.55;
+}
+
+
+.experience-card__description p:last-child {
+  margin-bottom: 0;
+}
+
+
+.experience-card__description p::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0.58em;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--accent);
+}
+
+
+/* ==================================================
+   QUOTE
+================================================== */
+
+.experience__quote {
+  position: relative;
+
+  width: min(520px, 85%);
+
+  margin: 30px auto 0;
+
+  padding:
+    17px 30px 17px 42px;
+
+  border:
+    1px solid rgba(255, 60, 80, 0.22);
+
+  border-radius: 10px;
+
+  background:
+    rgba(255, 60, 80, 0.045);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+
+.experience__quote p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-family:
+    "Comic Sans MS",
+    "Segoe Print",
+    cursive;
+
+  font-size: 0.75rem;
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+.experience__quote-mark {
+  position: absolute;
+
+  left: 14px;
+  top: 10px;
+
+  color: var(--accent);
+
+  font-family: Georgia, serif;
+
+  font-size: 1.5rem;
+
+  line-height: 1;
+}
+
+
+.experience__quote-line {
+  position: absolute;
+
+  left: 17px;
+  bottom: 11px;
+
+  width: 25px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+  .experience__header {
+    margin-bottom: 34px;
+  }
+
+
+  .experience-card {
+    grid-template-columns:
+      170px
+      minmax(0, 1fr);
+
+    gap: 22px;
+
+    padding: 17px;
+  }
+
+
+  .experience-card__image {
+    width: 170px;
+    height: 140px;
+  }
+
+
+  .experience-card__top h3 {
+    font-size: 1.2rem;
+  }
+
+
+  .experience-card__description p {
+    font-size: 0.78rem;
+  }
+
+}
+
+
+/* ==================================================
+   SMALL TABLET
+================================================== */
+
+@media (max-width: 760px) {
+
+  .experience__header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .experience__annotation {
+    align-self: flex-end;
+  }
+
+
+  .experience-card {
+    grid-template-columns:
+      150px
+      minmax(0, 1fr);
+
+    gap: 18px;
+
+    padding: 15px;
+  }
+
+
+  .experience-card__image {
+    width: 150px;
+    height: 130px;
+  }
+
+
+  .experience-card__period {
+    font-size: 0.64rem;
+
+    padding: 4px 8px;
+  }
+
+
+  .experience__quote {
+    width: 90%;
+  }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 560px) {
+
+  .experience__header {
+    margin-bottom: 28px;
+  }
+
+
+  .experience__title {
+    font-size: 2rem;
+  }
+
+
+  .experience__subtitle {
+    font-size: 0.82rem;
+  }
+
+
+  .experience__annotation {
+    font-size: 0.7rem;
+
+    gap: 8px;
+  }
+
+
+  .experience__annotation i {
+    width: 75px;
+  }
+
+
+  .experience__list {
+    gap: 16px;
+  }
+
+
+  .experience-card {
+    grid-template-columns:
+      125px
+      minmax(0, 1fr);
+
+    gap: 14px;
+
+    padding: 12px;
+
+    border-radius: 11px;
+  }
+
+
+  /* EXACT PROJECT IMAGE SIZE */
+
+  .experience-card__image {
+    width: 125px;
+    height: 120px;
+
+    border-radius: 6px;
+  }
+
+
+  .experience-card__image img {
+    padding: 7px;
+  }
+
+
+  .experience-card__top {
+    display: block;
+  }
+
+
+  .experience-card__top h3 {
+    font-size: 1rem;
+  }
+
+
+  .experience-card__company {
+    margin-top: 3px;
+
+    font-size: 0.65rem;
+  }
+
+
+  .experience-card__location {
+    margin-top: 3px;
+
+    font-size: 0.56rem;
+  }
+
+
+  .experience-card__period {
+    display: inline-flex;
+
+    margin-top: 6px;
+
+    min-height: 23px;
+
+    font-size: 0.58rem;
+
+    padding: 3px 7px;
+  }
+
+
+  .experience-card__description {
+    margin-top: 9px;
+  }
+
+
+  .experience-card__description p {
+    margin-bottom: 4px;
+
+    padding-left: 10px;
+
+    font-size: 0.68rem;
+
+    line-height: 1.4;
+  }
+
+
+  .experience-card__description p::before {
+    width: 3px;
+    height: 3px;
+  }
+
+
+  /* Quote */
+
+  .experience__quote {
+    width: 90%;
+
+    margin-top: 25px;
+
+    padding:
+      14px 20px 14px 35px;
+  }
+
+
+  .experience__quote p {
+    font-size: 0.65rem;
+  }
+
+
+  .experience__quote-mark {
+    left: 11px;
+    top: 8px;
+
+    font-size: 1.2rem;
+  }
+
+
+  .experience__quote-line {
+    left: 13px;
+    bottom: 8px;
+
+    width: 20px;
+  }
+
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+================================================== */
+
+@media (max-width: 390px) {
+
+  .experience-card {
+    grid-template-columns:
+      110px
+      minmax(0, 1fr);
+
+    gap: 11px;
+
+    padding: 10px;
+  }
+
+
+  .experience-card__image {
+    width: 110px;
+    height: 110px;
+  }
+
+
+  .experience-card__top h3 {
+    font-size: 0.9rem;
+  }
+
+
+  .experience-card__company {
+    font-size: 0.6rem;
+  }
+
+
+  .experience-card__location {
+    font-size: 0.52rem;
+  }
+
+
+  .experience-card__description p {
+    font-size: 0.62rem;
+  }
+
+
+  .experience-card__period {
+    font-size: 0.52rem;
+
+    padding: 3px 6px;
+  }
+
+}

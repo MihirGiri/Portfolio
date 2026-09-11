@@ -1,5 +1,6 @@
 import { profile, stats } from "../data";
 import heroAnim from "../assets/hero-anim.mp4";
+import heroMobileAnim from "../assets/hero-mobile.mp4";
 import heroStill from "../assets/hero-still.jpg";
 import "./Hero.css";
 
@@ -140,7 +141,7 @@ export default function Hero() {
         />
         <video
           className="hero__bg-mobile-video"
-          src="/hero-mobile.mp4"
+          src={heroMobileAnim}
           poster={heroStill}
           autoPlay
           muted

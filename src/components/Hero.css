@@ -30,7 +30,7 @@
   transition: opacity 0.5s ease;
 }
 
-.hero__bg-mobile-frames {
+.hero__bg-mobile-video {
   display: none;
 }
 
@@ -481,7 +481,7 @@
     display: none;
   }
 
-  .hero__bg-mobile-frames {
+  .hero__bg-mobile-video {
     display: block;
     width: 100%;
     height: 100%;

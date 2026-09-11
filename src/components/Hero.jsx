@@ -1,41 +1,7 @@
-import { useEffect, useState } from "react";
 import { profile, stats } from "../data";
 import heroAnim from "../assets/hero-anim.mp4";
 import heroStill from "../assets/hero-still.jpg";
 import "./Hero.css";
-
-const MOBILE_FRAMES = Object.entries(
-  import.meta.glob("../assets/mobile-feames/ezgif-frame-*.jpg", {
-    eager: true,
-    import: "default",
-    query: "?url",
-  }),
-)
-  .sort(([first], [second]) => first.localeCompare(second, undefined, { numeric: true }))
-  .map(([, frame]) => frame);
-
-function MobileFrameAnimation() {
-  const [frameIndex, setFrameIndex] = useState(0);
-
-  useEffect(() => {
-    if (MOBILE_FRAMES.length < 2) return undefined;
-
-    const frameTimer = window.setInterval(() => {
-      setFrameIndex((current) => (current + 1) % MOBILE_FRAMES.length);
-    }, 42);
-
-    return () => window.clearInterval(frameTimer);
-  }, []);
-
-  return (
-    <img
-      className="hero__bg-mobile-frames"
-      src={MOBILE_FRAMES[frameIndex] || heroStill}
-      alt=""
-      aria-hidden="true"
-    />
-  );
-}
 
 const TECH_ITEMS = [
   {
@@ -172,7 +138,15 @@ export default function Hero() {
           loop
           playsInline
         />
-        <MobileFrameAnimation />
+        <video
+          className="hero__bg-mobile-video"
+          src="/hero-mobile.mp4"
+          poster={heroStill}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
         <div className="hero__bg-overlay" />
       </div>
 

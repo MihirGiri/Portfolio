@@ -142,7 +142,6 @@ export default function Hero() {
         <video
           className="hero__bg-mobile-video"
           src={heroMobileAnim}
-          poster={heroStill}
           autoPlay
           muted
           loop

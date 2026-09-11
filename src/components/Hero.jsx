@@ -16,7 +16,6 @@ const MOBILE_FRAMES = Object.entries(
 
 function MobileFrameAnimation() {
   const [frameIndex, setFrameIndex] = useState(0);
-  const [frameLoadFailed, setFrameLoadFailed] = useState(false);
 
   useEffect(() => {
     if (MOBILE_FRAMES.length < 2) return undefined;
@@ -31,10 +30,9 @@ function MobileFrameAnimation() {
   return (
     <img
       className="hero__bg-mobile-frames"
-      src={frameLoadFailed ? heroStill : MOBILE_FRAMES[frameIndex] || heroStill}
+      src={MOBILE_FRAMES[frameIndex] || heroStill}
       alt=""
       aria-hidden="true"
-      onError={() => setFrameLoadFailed(true)}
     />
   );
 }
